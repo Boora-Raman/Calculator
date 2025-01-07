@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f3f4f6;
+    }
+    .calculator {
+      width: 250px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      height: 50px;
+      margin: 10px auto;
+      font-size: 1.5rem;
+      text-align: right;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 20%;
+      height: 50px;
+      margin: 5px;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      background-color: #eaeaea;
+      color: #333;
+    }
+    button:hover {
+      background-color: #ccc;
+    }
+    button.operation {
+      background-color: #f9a825;
+      color: white;
+    }
+    button.operation:hover {
+      background-color: #e6891f;
+    }
+    button.equals {
+      background-color: #29b6f6;
+      color: white;
+      width: 45%;
+    }
+    button.equals:hover {
+      background-color: #039be5;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" >
+
+    <div>
+        <button onclick="display.value+='0'">0</button>
+        <button onclick="display.value+='1'">1</button>
+        <button onclick="display.value+='2'">2</button>
+        <button onclick="display.value+='3'">3</button>
+        <button onclick="display.value+='4'">4</button>
+        <button onclick="display.value+='5'">5</button>
+        <button onclick="display.value+='6'">6</button>
+        <button onclick="display.value+='7'">7</button>
+        <button onclick="display.value+='8'">8</button>
+        <button onclick="display.value+='9'">9</button>
+    </div>
+    <div>
+        <button class="operation" onclick="display.value+='-'">-</button>
+        <button class="operation" onclick="display.value+='+'">+</button>
+        <button class="operation" onclick="display.value+='*'">*</button>
+        <button class="clear" onclick="display.value=''">C</button>
+      <button class="equals" onclick="display.value=eval(display.value)">=</button>
+    </div>
+  </div>
+</body>
+</html>
