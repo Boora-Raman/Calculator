@@ -1,12 +1,12 @@
 import java.util.*;
 public class hello
   {
-    static add(int a , int b)
+    static int add(int a , int b)
     {
       return a+b;
     }
 
-        static subtract(int a , int b)
+        static int subtract(int a , int b)
     {
       return a+b;
     }
