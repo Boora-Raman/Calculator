@@ -16,5 +16,9 @@ jobs:
       
     - name: compile java code 
       run: |
-        javac main.java
+        javac hello.java
+  
+    - name: run java code 
+      run: |
+        java hello
    
