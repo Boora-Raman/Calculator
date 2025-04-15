@@ -1,0 +1,20 @@
+name: TesingGithubActions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: compile & Test JAva
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the app code
+      uses: actions/checkout@v2
+      
+    - name: compile java code 
+      run: |
+        javac main.java
+   
